@@ -1,0 +1,102 @@
+:root {
+    --bg-color: #f8f9fa;
+    --card-bg: #ffffff;
+    --text-main: #333;
+    --text-muted: #777;
+    --primary: #2ecc71; /* Hijau untuk progres */
+    --accent: #3498db;
+}
+
+body {
+    font-family: 'Inter', -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+header {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    border: 1px solid #eee;
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.badge {
+    background: #e1f5fe;
+    color: #03a9f4;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.badge.yellow { background: #fffde7; color: #fbc02d; }
+
+/* Progress Bar */
+.progress-wrapper {
+    background: #eee;
+    border-radius: 20px;
+    height: 20px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--primary);
+    color: white;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Task List */
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #f9f9f9;
+    color: var(--text-muted);
+}
+
+.task-list li.done {
+    text-decoration: line-through;
+    color: #ccc;
+}
+
+.task-list li.active {
+    color: var(--text-main);
+    font-weight: 600;
+}
+
+.task-list li.active::before {
+    content: "→ ";
+    color: var(--accent);
+}
